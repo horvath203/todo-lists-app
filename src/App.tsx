@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.sass';
+import { List } from './interfaces';
+import TdList from './tdlist';
+
 
 function App() {
+
+  const [lists, UpdateLists] = useState<List[]>([]);
+
+  const show = useState(-1);
+
+  const CreateNewList = () => {
+    //console.log(lists)
+    UpdateLists([...lists, {id: lists.length, name: 'new list', nameEdit: false, items: [], deleted: false}]);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1 className="Title">Title of the Page</h1>
       </header>
+
+      <div className="Lists">
+        
+        {lists.map((list) => (
+          TdList({list, lists, UpdateLists, show})
+        ))}
+
+        <button className="Create-list" onClick={CreateNewList}>Create new list.</button>
+      </div>
+
     </div>
   );
 }
