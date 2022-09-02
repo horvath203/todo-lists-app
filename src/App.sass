@@ -1,3 +1,9 @@
+$breakpoint_tablet: 1024px
+
+@media screen and (min-width: ($breakpoint_tablet + 1))
+    .phone
+        display: none
+
 .App
     text-align: center
 
@@ -22,9 +28,18 @@
                 background-color: red
             .done
                 background-color: green
+            textarea
+                max-width: 99%
 
         .Create-list
             margin: 5px
 
 .not
     display: none
+
+@media screen and (max-width: $breakpoint_tablet)
+    .App
+        display: none
+    .phone
+        text-align: center
+        margin-top: 20vh

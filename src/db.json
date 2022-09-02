@@ -1,0 +1,34 @@
+{
+  "lists": [
+    {
+      "id": 0,
+      "name": "starter lst",
+      "items": [
+        {
+          "listId": 0,
+          "title": "sdas",
+          "titEdit": false,
+          "content": "wd",
+          "conEdit": false,
+          "done": false
+        }
+      ],
+      "nameEdit": false
+    },
+    {
+      "id": 1,
+      "name": "extra",
+      "nameEdit": false,
+      "items": [
+        {
+          "listId": 1,
+          "title": "sdas",
+          "titEdit": false,
+          "content": "wd",
+          "conEdit": false,
+          "done": false
+        }
+      ]
+    }
+  ]
+}

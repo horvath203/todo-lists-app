@@ -5,15 +5,14 @@ export interface List{
     name: string,
     nameEdit: boolean,
     items: Item[],
-    deleted: boolean,
 }
 
 export interface Item{
-    list: List,
+    listId: number,
     title: string,
     titEdit: boolean,
     content: string,
     conEdit: boolean,
-    deadline: Date
-    marked: boolean,
+    //deadline: Date
+    done: boolean,
 }
