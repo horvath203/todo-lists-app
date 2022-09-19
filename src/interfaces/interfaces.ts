@@ -5,6 +5,8 @@ export interface List{
     name: string,
     nameEdit: boolean,
     items: Item[],
+    filter: number,
+    searched: string,
 }
 
 export interface Item{
@@ -13,6 +15,10 @@ export interface Item{
     titEdit: boolean,
     content: string,
     conEdit: boolean,
-    //deadline: Date
+    deadline: Date,
     done: boolean,
+}
+
+export interface Filter{
+    Filter(var1: boolean): boolean,
 }

@@ -1,0 +1,107 @@
+$breakpoint_tablet: 920px
+
+@media screen and (min-width: ($breakpoint_tablet + 1))
+    .phone
+        display: none
+
+header
+    text-align: center
+    color: white
+    background-color: #272727
+    h1
+        margin: 0
+        padding-block-start: 0.67em
+        padding-block-end: 0.67em
+    
+
+main
+    text-align: center
+    background-color: #E5E5E5
+    padding-block: 3vh  
+
+    p
+        margin: 0
+    
+    .Create-list
+        margin: 5px
+        width: 70%
+        height: 10vh
+        background-color: blue
+        color: white
+        font-size: 4vmin
+        border-radius: 30px
+        
+    .Lists
+        text-align: left
+        border: 1px solid black
+        margin: 0% 15%
+        background-color: #e2dddd
+        padding: 2em 0.5em
+
+        h3
+            text-align: center
+
+        .tdlist
+            margin: 2px
+            .list-head
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding: 1em 0
+
+                h3
+                    margin: 0px
+                form
+                    //display: inline-block
+                    p
+                        display: inline-block
+            .tditem
+                margin: 1vmin
+                padding: 2vh
+                border: 2px solid black
+                background-color: grey
+
+                display: grid
+                grid-template-columns: auto auto 3vw
+                grid-template-areas: "title title checkbox" "content content ." "deadline remove ."
+                align-items: start
+
+                .tditemtitle
+                    grid-area: title
+                    margin: 0px
+                .tditembody
+                    grid-area: content
+                .checkmark
+                    grid-area: checkbox
+                    justify-self: end
+                .deadline
+                    grid-area: deadline
+                    max-width: 160px
+                .rmv-btn
+                    grid-area: remove
+                    width: 10vw
+                    min-width: 100px
+                    border: none
+                    background-color: #4f2020
+                    color: white
+                    align-self: end
+
+            .late
+                background-color: red
+            .done
+                background-color: green
+
+            .cre-btn
+                background-color: blue
+                color: white
+                border-radius: 10px
+
+.not
+    display: none
+
+@media screen and (max-width: $breakpoint_tablet)
+    main
+        display: none
+    .phone
+        text-align: center
+        margin-top: 20vh

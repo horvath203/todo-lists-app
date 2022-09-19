@@ -1,0 +1,94 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "to-do list app",
+      "nameEdit": false,
+      "items": [
+        {
+          "listId": 1,
+          "title": "make the app",
+          "titEdit": false,
+          "content": "make a decent looking react app within specified criteria",
+          "conEdit": false,
+          "deadline": "2022-08-05T22:00:00.000Z",
+          "done": false
+        },
+        {
+          "listId": 1,
+          "title": "make the app even after the agreed deadline",
+          "titEdit": false,
+          "content": "make the app look as good as possible",
+          "conEdit": false,
+          "deadline": "2022-09-17T21:54:10.112Z",
+          "done": true
+        },
+        {
+          "listId": 1,
+          "title": "submit the app and see",
+          "titEdit": false,
+          "content": "beg forgiveness for the terrible time management, with promise it shall not be common occurence",
+          "conEdit": false,
+          "deadline": "2022-09-29T21:54:18.422Z",
+          "done": false
+        }
+      ],
+      "filter": 0,
+      "searched": ""
+    },
+    {
+      "id": 2,
+      "name": "unused list",
+      "nameEdit": false,
+      "items": [
+        {
+          "listId": 2,
+          "title": "a useless task",
+          "titEdit": false,
+          "content": "it's too late anyhow",
+          "conEdit": false,
+          "deadline": "2022-09-19T22:39:39.010Z",
+          "done": false
+        },
+        {
+          "listId": 2,
+          "title": "anouther task",
+          "titEdit": false,
+          "content": "being worked on",
+          "conEdit": false,
+          "deadline": "2022-09-29T22:00:00.000Z",
+          "done": false
+        },
+        {
+          "listId": 2,
+          "title": "other task",
+          "titEdit": false,
+          "content": "probably the easiest, because of them",
+          "conEdit": false,
+          "deadline": "2022-09-29T22:00:00.000Z",
+          "done": true
+        },
+        {
+          "listId": 2,
+          "title": "yet anouther task",
+          "titEdit": false,
+          "content": "also worked on",
+          "conEdit": false,
+          "deadline": "2022-09-29T22:00:00.000Z",
+          "done": false
+        },
+        {
+          "listId": 2,
+          "title": "one last task",
+          "titEdit": false,
+          "content": "also done",
+          "conEdit": false,
+          "deadline": "2022-09-29T22:00:00.000Z",
+          "done": true
+        }
+      ],
+      "filter": 0,
+      "searched": ""
+    }
+  ]
+}

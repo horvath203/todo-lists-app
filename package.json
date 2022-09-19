@@ -21,8 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "json-server --watch src/db.json --port 5000",
-    "start-all": "npm run server && npm run start"
+    "server": "json-server --watch src/db/db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
