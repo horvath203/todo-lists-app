@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { List } from '../interfaces/interfaces';
 import TdList from './TdList';
 import { httpHelper } from "../db/httpHelper";
-import { FilterAll as defaultFilter } from '../interfaces/FilterStrategies';
 
 
 export default function App () {
@@ -17,7 +16,9 @@ export default function App () {
 
     useEffect(() => {
         GetLists();
+        console.log("getting", lists)
     }, [])
+    
 
     const AddList = (list: List) => {
 		api
@@ -43,7 +44,7 @@ export default function App () {
 
     const CreateNewList = () => {
         //console.log(lists)
-        AddList({id: lists.length + 1, name: 'new list', nameEdit:false, items: [], filter: 0, searched: "" });
+        AddList({id: lists.length + 1, name: 'new list', nameEdit: false, items: [], filter: 0, searched: "" });
     }
 
     return (
@@ -53,6 +54,7 @@ export default function App () {
 
         {/* LISTS FROM THE DB */}
         <div className="Lists">
+            <>
             <h3>Existing Lists:</h3>
         
             {lists.map((list) => (
@@ -62,7 +64,7 @@ export default function App () {
                 show:       activeItemForm,
                 formHook:   formHook})
             ))}
-
+            </>
         </div>
       </>
     );

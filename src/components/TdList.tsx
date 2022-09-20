@@ -17,7 +17,7 @@ export default function TdList (props: ListProps) {
 
   const list = props.list;
   const [showId, SetShow] = props.show;
-  const { register, handleSubmit } = props.formHook;
+  const { register, handleSubmit, reset: resetForm } = props.formHook;
 
 
   const SetNameEdit = (val: boolean) => {
@@ -44,17 +44,18 @@ export default function TdList (props: ListProps) {
       deadline: new Date(),
       done: false
     }];
-    console.log("new date", new Date());
+    resetForm();
     props.UpdateList(list);
   }
 
   const ShowForm = () => {
-    if(showId === list.id){
-      SetShow(-1);
-      console.log("equals", showId)
-    }
     SetShow(list.id);
-    //null form entries
+    resetForm();
+  }
+
+  const HideForm = () => {
+    SetShow(-1);
+    resetForm();
   }
 
   const SetFilter = (val: number) => {
@@ -175,7 +176,7 @@ export default function TdList (props: ListProps) {
 
                 <button type='submit'>Confirm new Task</button>
               </form>
-              <button onClick={ShowForm}>Cancel</button>
+              <button onClick={HideForm}>Cancel</button>
             </>
           ) : (
             <button className='cre-btn' onClick={ShowForm}>Create Task</button>
